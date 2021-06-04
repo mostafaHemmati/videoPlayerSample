@@ -1,0 +1,33 @@
+package com.hemmati.namavatest.domain.model.videos
+
+data class Data(
+    val app: Any,
+    val categories: List<Category>,
+    val content_rating: List<String>,
+    val created_time: String,
+    val description: String,
+    val duration: Int,
+    val embed: Embed,
+    val height: Int,
+    val is_playable: Boolean,
+    val language: Any,
+    val license: Any,
+    val link: String,
+    val metadata: MetadataX,
+    val modified_time: String,
+    val name: String,
+    val pictures: PicturesXX,
+    val privacy: Privacy,
+    val release_time: String,
+    val resource_key: String,
+    val stats: Stats,
+    val status: String,
+    val tags: List<Tag>,
+    val transcode: Any,
+    val type: String,
+    val upload: Any,
+    val uploader: Uploader,
+    val uri: String,
+    val user: User,
+    val width: Int
+)

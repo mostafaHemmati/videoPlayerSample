@@ -1,0 +1,33 @@
+package com.hemmati.namavatest.domain.model.videoDetail
+
+data class VideoDetail(
+    val app: App,
+    val categories: List<Any>,
+    val content_rating: List<String>,
+    val created_time: String,
+    val description: String,
+    val duration: Int,
+    val embed: Embed,
+    val height: Int,
+    val is_playable: Boolean,
+    val language: Any,
+    val license: Any,
+    val link: String,
+    val metadata: Metadata,
+    val modified_time: String,
+    val name: String,
+    val pictures: PicturesX,
+    val privacy: Privacy,
+    val release_time: String,
+    val resource_key: String,
+    val stats: Stats,
+    val status: String,
+    val tags: List<Any>,
+    val transcode: Any,
+    val type: String,
+    val upload: Any,
+    val uploader: Uploader,
+    val uri: String,
+    val user: User,
+    val width: Int
+)

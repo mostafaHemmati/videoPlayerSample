@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/searchListFragment">
+
+    <fragment
+        android:id="@+id/searchListFragment"
+        android:name="com.hemmati.namavatest.view.searchListFragment.SearchListFragment"
+        android:label="fragment_search_list"
+        tools:layout="@layout/fragment_search_list">
+        <action
+            android:id="@+id/action_searchListFragment_to_videoDetailFragment"
+            app:destination="@id/videoDetailFragment">
+            <argument
+                android:name="id"
+                app:argType="string" />
+        </action>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/videoDetailFragment"
+        android:name="com.hemmati.namavatest.view.videoDetailFragment.VideoDetailFragment"
+        android:label="fragment_video_detail2"
+        tools:layout="@layout/fragment_video_detail">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_videoDetailFragment_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment">
+            <argument
+                android:name="videoId"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.hemmati.namavatest.view.videoPlayerFragment.VideoPlayerFragment"
+        android:label="VideoPlayerFragment">
+        <argument
+            android:name="videoId"
+            app:argType="string" />
+    </fragment>
+</navigation>
