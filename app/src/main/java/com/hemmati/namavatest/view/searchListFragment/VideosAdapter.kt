@@ -3,12 +3,10 @@ package com.hemmati.namavatest.view.searchListFragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 import com.hemmati.namavatest.R
 import com.hemmati.namavatest.databinding.ListItemVideoBinding
 import com.hemmati.namavatest.domain.model.videos.Data
-import com.squareup.picasso.Picasso
 import kotlin.properties.Delegates
 
 class VideosAdapter :

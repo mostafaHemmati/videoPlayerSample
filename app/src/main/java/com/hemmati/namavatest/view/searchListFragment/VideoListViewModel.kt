@@ -23,6 +23,7 @@ class VideoListViewModel constructor(private val getVideoListUseCase: GetVideoLi
             return
         } else
             queryTextNullOrEmpty.value = false
+
         showProgressbar.value = true
 
         getVideoListUseCase.invoke(
@@ -46,8 +47,5 @@ class VideoListViewModel constructor(private val getVideoListUseCase: GetVideoLi
         super.onCleared()
     }
 
-    companion object {
-        private val TAG = VideoListViewModel::class.java.name
-    }
 
 }

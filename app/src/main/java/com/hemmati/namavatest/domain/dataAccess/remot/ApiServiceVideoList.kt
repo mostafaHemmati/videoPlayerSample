@@ -1,7 +1,6 @@
 package com.hemmati.namavatest.domain.dataAccess.remot
 
 import com.hemmati.namavatest.domain.model.videoDetail.VideoDetail
-import com.hemmati.namavatest.domain.model.videoUrlModel.VideoUrlModel
 import com.hemmati.namavatest.domain.model.videos.Video
 import retrofit2.http.GET
 import retrofit2.http.Header

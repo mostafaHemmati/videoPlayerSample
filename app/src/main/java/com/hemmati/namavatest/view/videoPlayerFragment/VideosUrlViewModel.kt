@@ -7,7 +7,6 @@ import com.hemmati.namavatest.domain.exeption.ApiError
 import com.hemmati.namavatest.domain.model.videoUrlModel.VideoUrlModel
 import com.hemmati.namavatest.domain.usecase.GetVideosUrlUseCase
 import com.hemmati.namavatest.domain.usecase.base.UseCaseResponse
-import com.hemmati.namavatest.view.searchListFragment.VideoListViewModel
 import kotlinx.coroutines.cancel
 
 class VideosUrlViewModel(
@@ -47,8 +46,5 @@ class VideosUrlViewModel(
         super.onCleared()
     }
 
-    companion object {
-        private val TAG = VideoListViewModel::class.java.name
-    }
 
 }

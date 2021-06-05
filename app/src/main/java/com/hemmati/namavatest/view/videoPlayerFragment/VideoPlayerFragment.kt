@@ -13,14 +13,14 @@ import com.google.android.exoplayer2.util.Util
 import com.hemmati.namavatest.R
 import com.hemmati.namavatest.databinding.FragmentVideoPlayerBinding
 import org.koin.android.viewmodel.ext.android.viewModel
-import org.koin.core.parameter.parametersOf
+import org.koin.core.parameter.DefinitionParameters
 
 
 class VideoPlayerFragment : Fragment(R.layout.fragment_video_player) {
-    val args: VideoPlayerFragmentArgs by navArgs()
+    private val args: VideoPlayerFragmentArgs by navArgs()
     private lateinit var fragmentVideoPlayerBinding: FragmentVideoPlayerBinding
-    private val videosUrlViewModel: VideosUrlViewModel by viewModel() {
-        parametersOf(args.videoId)
+    private val videosUrlViewModel: VideosUrlViewModel by viewModel {
+        DefinitionParameters(listOf(args.videoId))
     }
     private var player: SimpleExoPlayer? = null
     private var fileUrl: String = ""

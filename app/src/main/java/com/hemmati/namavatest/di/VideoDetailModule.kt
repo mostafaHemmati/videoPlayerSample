@@ -10,7 +10,12 @@ import org.koin.dsl.module
 
 val VideosDetailModule = module {
 
-    viewModel { (videoId: String) -> VideosDetailViewModel(get(), videoId) }
+    viewModel { (videoId: String) ->
+        VideosDetailViewModel(
+            getVideosDetailUseCase = get(),
+            videoId = videoId
+        )
+    }
 
     single { createGetVideosDetailUseCase(videosDetailRepository = get()) }
 

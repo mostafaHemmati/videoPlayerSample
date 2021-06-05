@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.hemmati.namavatest.databinding.FragmentVideoDetailBinding
+import com.hemmati.namavatest.util.showIf
 import com.hemmati.namavatest.util.showToast
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.DefinitionParameters
@@ -17,7 +17,7 @@ class VideoDetailFragment : Fragment() {
     private lateinit var fragmentVideoDetailBinding: FragmentVideoDetailBinding
 
     private val args: VideoDetailFragmentArgs by navArgs()
-    private val videosDetailViewModel: VideosDetailViewModel by viewModel() {
+    private val videosDetailViewModel: VideosDetailViewModel by viewModel {
         DefinitionParameters(listOf(args.id))
     }
 
@@ -44,8 +44,12 @@ class VideoDetailFragment : Fragment() {
             }
 
             showProgressbar.observe(viewLifecycleOwner) { state ->
-                fragmentVideoDetailBinding.progressBar.isVisible = state
-                fragmentVideoDetailBinding.allViews.isVisible = !state
+                fragmentVideoDetailBinding.progressBar.showIf {
+                    state
+                }
+                fragmentVideoDetailBinding.allViews.showIf {
+                    !state
+                }
             }
 
             messageData.observe(viewLifecycleOwner) {

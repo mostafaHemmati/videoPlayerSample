@@ -1,6 +1,5 @@
 package com.hemmati.namavatest.domain.exeption
 
-import com.hemmati.namavatest.domain.exeption.ApiError
 import retrofit2.HttpException
 import java.io.IOException
 import java.net.SocketTimeoutException

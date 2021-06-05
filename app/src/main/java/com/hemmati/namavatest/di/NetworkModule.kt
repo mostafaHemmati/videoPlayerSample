@@ -17,7 +17,6 @@ const val BASE_URL_VIDEO_PLAYER = BuildConfig.BASE_URL_VIDEO_PLAYER
 val NetworkModule = module {
     single(Qualifiers.RETROFIT_VIDEO_LIST) { createRetrofit(get(), BASE_URL) }
     single(Qualifiers.RETROFIT_VIDEO_PLAYER) { createRetrofit(get(), BASE_URL_VIDEO_PLAYER) }
-    single { createRetrofit(get(), BASE_URL) }
     single { createOkHttpClient() }
 
     single { GsonConverterFactory.create() }
